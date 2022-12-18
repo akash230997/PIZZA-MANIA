@@ -1,31 +1,56 @@
-body {
-  background: #333;
-  font-family: "Oswald", sans-serif;
+* {
   box-sizing: border-box;
 }
+body {
+  /* background: linear-gradient(to right, #c31432, #240b36); */
+background: linear-gradient(to right, #a8c0ff, #3f2b96);
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+  /* animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
+}
+
+/* @-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+} */
+
 .Head {
   font-size: 2.5rem;
   color: #fff;
 }
-.MainMenuBox {
-  display: block;
-  padding: 20px;
-  display: flex;
-  /* width: 1000px; */
-  margin-top: 200px;
-  position: relative;
-  border: 1px solid #000;
-  justify-content: space-between;
-}
 .PizzaOne {
   width: 250px;
   height: 250px;
+  float: left;
+  margin-left: 50px;
+  margin-top: 100px;
   cursor: pointer;
   background-image: url("https://i.ibb.co/gzs3hTn/pizza-base2.png");
   background-size: contain;
   border-radius: 50%;
   display: inline-block;
-  float: left;
+  border: 5px solid;
+  border-color: rgb(90, 82, 82);
   /* background-position: center center; */
   /* border: 1px solid #000; */
 }
@@ -34,13 +59,15 @@ body {
   width: 250px;
   height: 250px;
   cursor: pointer;
-  /* border: 1px solid #000; */
   background-image: url("https://i.ibb.co/KjBXVdC/pizza-base1.png");
   background-size: contain;
   display: inline-block;
   float: right;
-  /* border-radius: 50%; */
-  /* margin-left: 30%; */
+  margin-right: 50px;
+  margin-top: 100px;
+  border-radius: 50%;
+  border: 5px solid;
+  border-color: rgb(90, 82, 82);
 }
 ul {
   /* width: 27%; */
@@ -56,6 +83,12 @@ ul {
   align-items: center;
 }
 
+.hold {
+  transition: 2s;
+  transform: rotate(360deg);
+  border: 10px dashed goldenrod;
+}
+
 .list {
   display: none;
   transition: 3s all;
@@ -66,6 +99,7 @@ ul {
   top: 120px;
   left: 10px;
   font-size: 1.3rem;
+  /* border: 1px solid #000; */
 }
 .positionM {
   /* border: 1px solid #000; */
@@ -122,6 +156,9 @@ ul {
   margin-left: 20px;
   cursor: grab;
 }
+.mobileTab {
+  display: none;
+}
 .dropPoint {
   width: 350px;
   height: 350px;
@@ -148,6 +185,184 @@ ul {
   bottom: 0%;
   margin: auto;
 }
+/* .show{
+  animation: Entrance 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}@keyframes Entrance {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+} */
+
+.idon {
+  animation: Icon 4s linear infinite alternate both;
+}
+@keyframes Icon {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
+      0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
+      0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
+      0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
+      0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
+      0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2),
+      0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2),
+      0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
+      0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
+      0 0 100px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.logo {
+  animation: MyCam 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate
+    both;
+}
+@keyframes MyCam {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #dropzone {
   position: relative;
   border: 10px dotted #fff;
@@ -167,11 +382,6 @@ ul {
   background-color: #222;
 }
 
-.hold {
-  transition: 2s;
-  transform: rotate(360deg);
-  border: 10px dashed goldenrod;
-}
 .pizzabaseOne {
   background-image: url("https://i.ibb.co/gzs3hTn/pizza-base2.png");
   background-size: cover;
@@ -200,32 +410,192 @@ ul {
   background-size: cover;
 }
 
-/* #dropzone.dropped {
-  background: #222;
-  border: 10px solid #444;
-} */
-
-/* #dropzone div {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-} */
-
-/* #dropzone img {
-  border-radius: 10px;
-  vertical-align: middle;
-  max-width: 95%;
-  max-height: 95%;
-} */
-
-/* #dropzone [type="file"] {
-  cursor: pointer;
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-} */
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  body {
+    background: linear-gradient(to right, #373b44, #4286f4); 
+    font-size: 0.7rem;
+  }
+  .PizzaOne {
+    width: 100px;
+    height: 100px;
+    float: none;
+    border: none;
+    position: absolute;
+    top: auto;
+    bottom: 100px;
+    left: 0px;
+  }
+  .PizzaTwo {
+    width: 100px;
+    height: 100px;
+    float: none;
+    border: none;
+    position: absolute;
+    top: auto;
+    bottom: 100px;
+    right: 0px;
+  }
+  .dropPoint {
+    width: 200px;
+    height: 200px;
+    border: 10px #fff;
+    border-style: dashed;
+    background-color: #333;
+    position: absolute;
+    top: 140px;
+    left: 25%;
+  }
+  .mobileTab {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.6rem;
+    /* border: 1px solid #000; */
+    border-radius: 5px;
+    position: relative;
+    top: 70px;
+    left: 25%;
+    animation: Icon 4s linear infinite alternate both;
+  }
+  .footer {
+    display: none;
+  }
+  .positionM {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+  .position{
+    /* display: none; */
+    font-size: 1rem;
+    top: 60px;
+    left: 0;
+  }
+  .list {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-right: 50px; */
+    width: 100%;
+    /* border: 1px solid #000; */
+    margin-top: 30px;
+  }
+  .Pizza1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 0;
+    /* margin: 0%; */
+    margin-left: -30px;
+  }
+  .Pizza2 {
+    width: 60px;
+    height: 60px;
+    margin: 0%;
+    border-radius: 0;
+  }
+  .Pizza3 {
+    width: 60px;
+    height: 60px;
+    margin: 0%;
+    border-radius: 0;
+  }
+  .Pizza4 {
+    width: 60px;
+    height: 60px;
+    margin: 0%;
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 481px){
+  body{
+    background: linear-gradient(to right, #005aa7, #fffde4);
+  }
+  .PizzaOne {
+    width: 100px;
+    height: 100px;
+    float: none;
+    border: none;
+    position: absolute;
+    top: auto;
+    bottom: 100px;
+    left: 0px;
+  }
+  .PizzaTwo {
+    width: 100px;
+    height: 100px;
+    float: none;
+    border: none;
+    position: absolute;
+    top: auto;
+    bottom: 100px;
+    right: 0px;
+  }
+  .dropPoint {
+    width: 200px;
+    height: 200px;
+    border: 10px #fff;
+    border-style: dashed;
+    background-color: #333;
+    position: absolute;
+    top: 160px;
+    left: 40%;
+  }
+  .mobileTab {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.6rem;
+    /* border: 1px solid #000; */
+    border-radius: 5px;
+    position: relative;
+    top: 70px;
+    left: 25%;
+    animation: Icon 4s linear infinite alternate both;
+  }
+  .footer {
+    display: none;
+  }
+  .positionM {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+  .position{
+    /* display: none; */
+    font-size: 1rem;
+    top: 60px;
+    left: 0;
+  }
+  .list {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-right: 50px; */
+    width: 100%;
+    /* border: 1px solid #000; */
+    margin-top: 30px;
+  }
+  .Pizza1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 0;
+    /* margin: 0%; */
+    margin-left: -30px;
+  }
+  .Pizza2 {
+    width: 60px;
+    height: 60px;
+    margin: 0%;
+    border-radius: 0;
+  }
+  .Pizza3 {
+    width: 60px;
+    height: 60px;
+    margin: 0%;
+    border-radius: 0;
+  }
+  .Pizza4 {
+    width: 60px;
+    height: 60px;
+    margin: 0%;
+    border-radius: 0;
+  }
+}
