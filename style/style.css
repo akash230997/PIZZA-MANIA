@@ -84,6 +84,7 @@ ul {
   background-repeat: no-repeat;
   background-size: contain;
   /* transform: scale(1.5) */
+  cursor: grab;
 }
 .Pizza2 {
   width: 100px;
@@ -95,6 +96,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: 20px;
+  cursor: grab;
 }
 .Pizza3 {
   width: 100px;
@@ -105,6 +107,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: grab;
 }
 .Pizza4 {
   width: 100px;
@@ -117,6 +120,7 @@ ul {
   background-size: contain;
   background-color: #fff;
   margin-left: 20px;
+  cursor: grab;
 }
 .dropPoint {
   width: 350px;
