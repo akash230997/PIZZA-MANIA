@@ -11,131 +11,160 @@ const list = document.querySelector('.list')
 let tukzer = document.getElementsByClassName('kudos');
 
 
-const pizzaBaseA = () => {
-
-    PizzaOne.addEventListener('dragstart', (e) => {
-        console.log('DragStart')
-        e.target.className += ' hold'
-    })
-
-    PizzaOne.addEventListener('dragend', (e) => {
-        console.log('dragend')
-        e.target.className = "PizzaOne"
-    })
 
 
+PizzaOne.addEventListener('dragstart', PizzaOneDragStart)
 
-    PizzaOne.addEventListener("dragover", function (e) {
-        e.preventDefault();
-        setTimeout(() => {
-            dropPoint.classList.add("pizzabaseOne");
-            dropPoint.classList.remove("pizzabaseTwo");
-        }, 1000);
-    });
-
+function PizzaOneDragStart(e) {
+    console.log('DragStart')
+    e.target.className += ' hold'
 }
-pizzaBaseA()
 
-PizzaTwo.addEventListener('dragstart', (e) => {
+PizzaOne.addEventListener('dragend', PizzaOneDragEnd)
+
+function PizzaOneDragEnd(e) {
+    console.log('dragend')
+    e.target.className = "PizzaOne"
+}
+
+
+PizzaOne.addEventListener("dragover", PizzaOneDragOver);
+
+function PizzaOneDragOver(e) {
+    e.preventDefault();
+    setTimeout(() => {
+        dropPoint.classList.add("pizzabaseOne");
+        dropPoint.classList.remove("pizzabaseTwo");
+    }, 0);
+}
+
+
+PizzaTwo.addEventListener('dragstart', PizzaTwoDragStart);
+
+function PizzaTwoDragStart(e) {
     console.log('DragStart')
     e.target.className += ' hold';
-})
+}
 
-PizzaTwo.addEventListener('dragend', (e) => {
+PizzaTwo.addEventListener('dragend', PizzaTwoDragEnd)
+
+function PizzaTwoDragEnd(e) {
     console.log('dragend')
     e.target.className = "PizzaTwo";
-})
+}
 
-PizzaTwo.addEventListener("dragover", function (e) {
+PizzaTwo.addEventListener("dragover", PizzaTwoDragOver)
+
+function PizzaTwoDragOver(e) {
     e.preventDefault();
     setTimeout(() => {
         dropPoint.classList.add("pizzabaseTwo");
-    }, 1000);
-});
+    }, 0);
+};
 
-Pizza1.addEventListener('dragstart', (e) => {
+Pizza1.addEventListener('dragstart', Pizza1DragStart)
+
+function Pizza1DragStart(e) {
     console.log('DragStart')
     e.target.className += ' hold'
-})
+}
 
-Pizza1.addEventListener('dragend', (e) => {
+Pizza1.addEventListener('dragend', Pizza1DragEnd)
+
+function Pizza1DragEnd(e) {
     console.log('dragend')
     e.target.className = 'Pizza1'
-})
+}
 
-Pizza1.addEventListener("dragover", function (e) {
+Pizza1.addEventListener("dragover", Pizza1DragOver);
+
+function Pizza1DragOver(e) {
     e.preventDefault();
     setTimeout(() => {
         dropPoint.classList.add("Pizza1Pepperoni");
         dropPoint.classList.remove("Pizza1Mushrooms");
         dropPoint.classList.remove("Pizza1Peppers");
         dropPoint.classList.remove("Pizza1Onions");
-    }, 1000);
-});
+    }, 0);
+}
 
+Pizza2.addEventListener('dragstart', Pizza2DragStart);
 
-Pizza2.addEventListener('dragstart', (e) => {
+function Pizza2DragStart(e) {
     console.log('DragStart')
     e.target.className += ' hold'
-})
+}
 
-Pizza2.addEventListener('dragend', (e) => {
+Pizza2.addEventListener('dragend', Pizza2DragEnd);
+
+function Pizza2DragEnd(e) {
     console.log('dragend')
     e.target.className = 'Pizza2'
-})
+}
 
 
-Pizza2.addEventListener("dragover", function (e) {
+Pizza2.addEventListener("dragover", Pizza2DragOver);
+
+function Pizza2DragOver(e) {
     e.preventDefault();
     setTimeout(() => {
         dropPoint.classList.add("Pizza1Mushrooms");
         dropPoint.classList.remove("Pizza1Pepperoni");
         dropPoint.classList.remove("Pizza1Peppers");
         dropPoint.classList.remove("Pizza1Onions");
-    }, 1000);
-});
+    }, 0);
+}
 
 
+Pizza3.addEventListener('dragstart', Pizza3DragStart);
 
-Pizza3.addEventListener('dragstart', (e) => {
+function Pizza3DragStart(e) {
     console.log('DragStart')
     e.target.className += ' hold'
-})
+}
 
-Pizza3.addEventListener('dragend', (e) => {
+Pizza3.addEventListener('dragend', Pizza3DragEnd);
+function Pizza3DragEnd(e) {
     console.log('dragend')
     e.target.className = 'Pizza3'
-})
+}
 
-Pizza3.addEventListener("dragover", function (e) {
+Pizza3.addEventListener("dragover", Pizza3DragOver);
+
+function Pizza3DragOver(e) {
     e.preventDefault();
     setTimeout(() => {
         dropPoint.classList.add("Pizza1Onions");
         dropPoint.classList.remove("Pizza1Mushrooms");
         dropPoint.classList.remove("Pizza1Pepperoni");
         dropPoint.classList.remove("Pizza1Peppers");
-    }, 1000);
-});
+    }, 0);
+}
 
-Pizza4.addEventListener('dragstart', (e) => {
+Pizza4.addEventListener('dragstart', Pizza4DragStart);
+
+function Pizza4DragStart(e) {
     console.log('DragStart')
     e.target.className += ' hold'
-})
+}
 
-Pizza4.addEventListener('dragend', (e) => {
+Pizza4.addEventListener('dragend', Pizza4DragEnd)
+
+function Pizza4DragEnd(e) {
     console.log('dragend')
     e.target.className = 'Pizza4'
-})
+}
 
-Pizza4.addEventListener("dragover", function (e) {
+Pizza4.addEventListener("dragover", Pizza4DragOver);
+function Pizza4DragOver(e) {
     e.preventDefault();
     setTimeout(() => {
         dropPoint.classList.add("Pizza1Peppers");
         dropPoint.classList.remove("Pizza1Onions");
         dropPoint.classList.remove("Pizza1Mushrooms");
         dropPoint.classList.remove("Pizza1Pepperoni");
-    }, 1000);
-});
+    }, 0);
+}
 
 dropPoint.addEventListener("dragenter", function (e) {
     e.preventDefault()
